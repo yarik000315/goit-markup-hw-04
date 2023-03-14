@@ -64,6 +64,7 @@ p {
   --title-color: #212121;
   --big-title-color: #ffffff;
   --hover-color: #2196f3;
+  --icon-color: #afb1b8;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -169,48 +170,24 @@ body {
   color: var(--hover-color);
 }
 
-/* .contacts a:first-child::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 12px;
+.envelope-icon {
   margin-right: 10px;
-  background-image: url(../images/SVG/envelope.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.contacts a:last-child::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background-image: url(../images/SVG/phone.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-
-.contacts a::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: currentColor;
 }
 
-.contacts-mail::before {
-  background-image: url(../images/SVG/envelope.svg);
+.phone-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
-a.contacts-tel::before {
-  width: 10px;
-  height: 16px;
-  background-image: url(../images/SVG/phone.svg);
+.contacts-mail:hover,
+.contacts-mail:focus {
+  fill: var(--hover-color);
+}
+
+.contacts-tel:hover,
+.contacts-mail:focus {
+  fill: var(--hover-color);
 }
 /* MAIN */
 
@@ -406,37 +383,62 @@ a.contacts-tel::before {
 }
 
 .social-icon {
+  display: inline-flex;
   margin-right: 10px;
   border-radius: 50%;
 }
 
+.social-icon:hover {
+  background-color: var(--hover-color);
+}
+
 .social-icon a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
 }
+
 .social-icon:last-child {
   margin-right: 0;
 }
 
-.instagram {
-  background-image: url(../images/SVG/instagram.svg);
+.social-link {
+  fill: var(--icon-color);
 }
 
-.twitter {
-  background-image: url(../images/SVG/twitter.svg);
+.social-link:hover,
+.social-link:focus {
+  fill: var(--big-title-color);
+}
+
+/* .twitter {
+  fill: var(--icon-color);
+}
+
+.twitter:hover,
+.twitter:focus {
+  fill: var(--big-title-color);
 }
 
 .facebook {
-  background-image: url(../images/SVG/facebook.svg);
+  fill: var(--icon-color);
+}
+
+.facebook:hover,
+.facebook:focus {
+  fill: var(--big-title-color);
 }
 
 .linkedin {
-  background-image: url(../images/SVG/linkedin.svg);
+  fill: var(--icon-color);
 }
+
+.linkedin:hover,
+.linkedin:focus {
+  fill: var(--big-title-color);
+} */
 
 /* clients */
 .clients {
@@ -460,7 +462,6 @@ a.contacts-tel::before {
 
 .clients-item {
   width: calc((100%-150px) / 6);
-  /* background-color: red; */
   margin-right: 30px;
   height: 92px;
   border: 1px solid #afb1b8;
@@ -471,16 +472,21 @@ a.contacts-tel::before {
   margin-right: 0;
 }
 
-.clients-item a {
+.clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  color: var(--icon-color);
 }
 
-/* .clients-icon {
-  width: 106px;
-  height: 60px; }*/
+.clients-icon {
+  fill: currentColor;
+}
+
+.clients-icon:hover {
+  fill: var(--hover-color);
+}
 
 footer {
   background-color: #2f303a;
