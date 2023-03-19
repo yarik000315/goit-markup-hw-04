@@ -31,17 +31,11 @@
     background-color: #f5f5f5;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
-  
-    // Misc
-    opacity: 1;
-  } */
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* The container must be used in child-elements; */
 
-* {
+/* * {
   outline: 2px solid tomato;
-}
+} */
 
 img {
   display: block;
@@ -86,11 +80,9 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  /* background-color: rgb(179, 160, 136); */
 }
 /* HEADER */
-/* an altarnative version is writen in the comments */
+
 .page-head {
   display: flex;
   align-items: center;
@@ -126,13 +118,6 @@ body {
   color: var(--title-color);
 }
 
-/* .navigation-item {
-  margin-left: 50px;
-}
-
-.navigation-item:first-child {
-  margin-left: 93px;
-} */
 .navigation-item {
   margin-right: 50px;
 }
@@ -203,6 +188,9 @@ body {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero h1 {
@@ -237,34 +225,6 @@ body {
 .features-icon {
   margin-top: 25px;
 }
-
-/* .features-item::before {
-  content: "";
-  display: block;
-  height: 120px;
-  margin-bottom: 30px;
-
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-}
-
-.antenna::before {
-  background-image: url(../images/SVG/antenna.svg);
-}
-.clock::before {
-  background-image: url(../images/SVG/clock.svg);
-}
-
-.vector::before {
-  background-image: url(../images/SVG/vector.svg);
-}
-
-.astronaut::before {
-  background-image: url(../images/SVG/astronaut.svg);
-} */
 
 .features-list {
   display: flex;
@@ -371,7 +331,7 @@ body {
 }
 
 .team-item p {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.19;
@@ -380,16 +340,12 @@ body {
 .social-list {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .social-icon {
   display: inline-flex;
   margin-right: 10px;
-  border-radius: 50%;
-}
-
-.social-icon:hover {
-  background-color: var(--hover-color);
 }
 
 .social-icon a {
@@ -411,34 +367,9 @@ body {
 .social-link:hover,
 .social-link:focus {
   fill: var(--big-title-color);
+  background-color: var(--hover-color);
+  border-radius: 50%;
 }
-
-/* .twitter {
-  fill: var(--icon-color);
-}
-
-.twitter:hover,
-.twitter:focus {
-  fill: var(--big-title-color);
-}
-
-.facebook {
-  fill: var(--icon-color);
-}
-
-.facebook:hover,
-.facebook:focus {
-  fill: var(--big-title-color);
-}
-
-.linkedin {
-  fill: var(--icon-color);
-}
-
-.linkedin:hover,
-.linkedin:focus {
-  fill: var(--big-title-color);
-} */
 
 /* clients */
 .clients {
@@ -477,19 +408,25 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: var(--icon-color);
 }
 
+.clients-link {
+  color: var(--icon-color);
+}
 .clients-icon {
   fill: currentColor;
 }
 
-.clients-icon:hover {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--hover-color);
 }
 
-footer {
+.footer-wrap {
   background-color: #2f303a;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .foot-logo {
@@ -549,6 +486,16 @@ address {
   margin-top: 20px;
 }
 
+.footer-icon {
+  fill: var(--big-title-color);
+}
+
 .footer-social-icon .social-icon {
+  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-icon .social-icon:hover,
+.footer-social-icon .social-icon:focus {
+  background-color: var(--hover-color);
 }
